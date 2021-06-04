@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>upload</title>
+</head>
+<body>
+    <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <p>
+            <label>Введите title</label>
+            <input type="text" name="title">
+        </p>
+        <p>
+            <input type="file" name="image" value="Выберите файл">
+        </p>
+        <p>
+            <input type="submit" value="Загрузить">
+        </p>
+    </form>
+</body>
+</html>

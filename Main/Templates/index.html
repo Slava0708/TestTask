@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Основная страница</title>
+</head>
+<body>
+    <a href="upload/">Перейти на сайт для загрузки картинки</a>
+    <p>
+        <h2>Ваши картинки</h2>
+    </p>
+    <table>
+        {% for i in images %}
+        <tr>
+            <td>
+                Title: {{ i.title }}
+            </td>
+            <td>
+                <img src="{{ i.image }}" alt="Ваша {{ i.id }} картинка">
+            </td>
+            <td>
+                Дата: {{ i.date }}
+            </td>
+            <td>
+                <a href="delete/{{ i.id }}">Удалить</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
